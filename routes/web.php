@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BasketController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,9 +30,9 @@ Route::get("/About", [AboutController::class,"about"])->name("About");
 
 Route::get("/Contact", [ContactController::class,"contact"])->name("Contact");
 
-Route::get("/Admin", [ContactController::class,"admin"])->name("Admin");
-Route::get("/User", [ContactController::class,"user"])->name("User");
-Route::get("/Order", [ContactController::class,"order"])->name("Order");
+Route::get("/Admin", [AdminController::class,"admin"])->name("Admin");
+Route::get("/Basket", [BasketController::class,"user"])->name("Basket");
+Route::get("/Order", [OrderController::class,"order"])->name("Order");
 
 
 require __DIR__.'/auth.php';
