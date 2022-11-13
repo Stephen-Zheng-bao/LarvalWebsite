@@ -6,6 +6,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ItemController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +25,11 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $items = DB::table('items')->select('productName','productCost','productQuantity','productDescription','productRating')->get();
+    return view('dashboard')->with('items', $items);
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::resource("items",ItemController::class);
 
 Route::get("/About", [AboutController::class,"about"])->name("About");
 
