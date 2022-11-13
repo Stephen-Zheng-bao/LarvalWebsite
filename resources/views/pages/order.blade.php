@@ -9,5 +9,5 @@
             {{ __('Order') }}
         </h2>
     </x-slot>
-    Order
+    Past Order
 </x-app-layout>

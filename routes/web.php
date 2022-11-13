@@ -20,7 +20,8 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $items = DB::table('items')->select('productName','productCost','productQuantity','productDescription','productRating')->get();
+    return view('welcome')->with('items', $items);
 });
 
 
@@ -36,7 +37,7 @@ Route::get("/About", [AboutController::class,"about"])->name("About");
 Route::get("/Contact", [ContactController::class,"contact"])->name("Contact");
 
 Route::get("/Admin", [AdminController::class,"admin"])->name("Admin");
-Route::get("/Basket", [BasketController::class,"user"])->name("Basket");
+Route::get("/Basket", [BasketController::class,"basket"])->name("Basket");
 Route::get("/Order", [OrderController::class,"order"])->name("Order");
 
 

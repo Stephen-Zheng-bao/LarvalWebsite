@@ -1,7 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Product') }}
+            {{ __('Welcome') }}
+            @auth
+                {{ Auth::user()->name }}
+            @endauth
         </h2>
     </x-slot>
     <!-- TODO: We need a for loop for every product in the database-->
@@ -19,6 +22,7 @@
                                     <p class="mt-4 text-lg text-gray-900">{{ $item-> productDescription }}</p>
                                     <p class="mt-4 text-lg text-gray-900">{{ $item-> productRating }}</p>
                                 </div>
+                                <x-primary-button class="mt-4">{{ __('Buy it') }}</x-primary-button>
                             </div>
                         @endforeach
                     </div>
