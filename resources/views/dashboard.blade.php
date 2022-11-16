@@ -16,11 +16,11 @@
                         @foreach ($items as $item)
                             <div class="p-6 flex space-x-2">
                                 <div class="flex-1">
-                                    <p class="mt-4 text-lg text-gray-900">{{ $item-> productName}}</p>
-                                    <p class="mt-4 text-lg text-gray-900">{{ $item-> productCost}}</p>
-                                    <p class="mt-4 text-lg text-gray-900">{{ $item-> productQuantity}}</p>
-                                    <p class="mt-4 text-lg text-gray-900">{{ $item-> productDescription }}</p>
-                                    <p class="mt-4 text-lg text-gray-900">{{ $item-> productRating }}</p>
+                                    <p class="mt-4 text-lg text-gray-900">Product: {{ $item-> productName}}</p>
+                                    <p class="mt-4 text-lg text-gray-900">Cost: {{ $item-> productCost}}</p>
+                                    <p class="mt-4 text-lg text-gray-900">Quantity: £{{ $item-> productQuantity}}</p>
+                                    <p class="mt-4 text-lg text-gray-900">Description: {{ $item-> productDescription }}</p>
+                                    <p class="mt-4 text-lg text-gray-900">Rating: {{ $item-> productRating }} Star</p>
                                 </div>
                                 <x-primary-button class="mt-4">{{ __('Buy it') }}</x-primary-button>
                             </div>

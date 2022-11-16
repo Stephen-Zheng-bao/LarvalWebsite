@@ -1,0 +1,88 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\PastOrder;
+use Illuminate\Http\Request;
+
+class PastOrderController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $validated = $request->validate();
+        DB::insert('insert into PastOrder (id, name) values (?, ?)', [1, 'Marc']);
+
+
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\PastOrder  $pastOrder
+     * @return \Illuminate\Http\Response
+     */
+    public function show(PastOrder $pastOrder)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\PastOrder  $pastOrder
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(PastOrder $pastOrder)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\PastOrder  $pastOrder
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, PastOrder $pastOrder)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\PastOrder  $pastOrder
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(PastOrder $pastOrder)
+    {
+        //
+    }
+}
