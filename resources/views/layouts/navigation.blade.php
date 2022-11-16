@@ -1,6 +1,7 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!-- TODO: FIX this whole nav bar mess and fill it in properly -->
 
@@ -8,15 +9,19 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
+                <header>
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
-                    </a>
-                </div>
+                <a href="#" class="brand">YazTec</a>
+
+                <a href="{{ route('dashboard') }}">
+                    <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                </a>
+
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+
+                <div class="family">
+
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Home') }}
                     </x-nav-link>
@@ -26,14 +31,58 @@
                     <x-nav-link :href="route('Contact')" :active="request()->routeIs('Contact')">
                         {{ __('Contact') }}
                     </x-nav-link>
-                    @auth
-                        <x-nav-link :href="route('Basket')" :active="request()->routeIs('Basket')">
-                            {{ __('Basket') }}
-                        </x-nav-link>
-                    @endauth
 
-                </div>
+
+
+                    @auth
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-nav-link :href="route('logout')" onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                                {{ __('Log out') }}
+                            </x-nav-link>
+                        </form>
+                        <x-nav-link :href="route('Basket')" :active="request()->routeIs('Basket')">
+                            <ion-icon name="cart-outline">
+                        </x-nav-link>
+
+
+
+                        @if(Auth::user()->name == "admin")
+                                    <x-nav-link :href="route('Admin')" :active="request()->routeIs('Admin')">
+                                        <ion-icon name="people-circle-outline">
+                                    </x-nav-link>
+                        @else
+                                    <x-nav-link :href="route('Order')" :active="request()->routeIs('Order')">
+                                        <ion-icon name="people-circle-outline">
+                                    </x-nav-link>
+
+                        @endif
+                    @else
+
+
+                        <x-nav-link :href="route('login')" >
+                            Log in
+                        </x-nav-link>
+
+
+                        <x-nav-link :href="route('register')" >
+                            Register
+                        </x-nav-link>
+                    
+                    @endauth
+                    <div class="search">
+				        <span class="ionicons">
+					        <ion-icon name="search-outline" class="searchBtn"></ion-icon>
+					        <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+				        </span>
+                    </div>
+
             </div>
+            <div class="searchArea">
+                <input type="text" placeholder="Type here . . ."
+                       div>
+                </header>
 
 
             <!-- TODO: Nav Bar need to fixed-->
@@ -41,10 +90,11 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <x-dropdown align="right" width="48">
+                {{--<x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+
                                 @auth
                                     <!-- The person username-->
                                     @if(Auth::user()->name == "admin")
@@ -71,19 +121,19 @@
                                 @endauth
                             </div>
 
-                            {{-- This is the start of the drop down
+                             This is the start of the drop down
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
-                            </div>--}}
+                            </div>
                         </button>
                     </x-slot>
 
                     <x-slot name="content">
 
                     </x-slot>
-                </x-dropdown>
+                </x-dropdown>--}}
             </div>
 
         </div>
@@ -131,3 +181,53 @@
     </div>
     @endauth--}}
 </nav>
+
+<script>
+
+    let header = document.querySelector('header');
+
+    let searchBtn = document.querySelector('.searchBtn');
+
+    let closeBtn = document.querySelector('.closeBtn');
+
+    let searchArea = document.querySelector('.searchArea');
+
+    let nav = document.querySelector('.nav');
+
+    let menuToggle = document.querySelector('.menuToggle');
+
+
+    searchBtn.onclick = function(){
+
+        header.classList.remove('open');
+
+        searchArea.classList.add('active');
+
+        closeBtn.classList.add('active');
+
+        searchBtn.classList.add('active');
+
+        menuToggle.classList.add('hide');
+
+    }
+    closeBtn.onclick = function(){
+
+        searchArea.classList.remove('active');
+
+        closeBtn.classList.remove('active');
+
+        searchBtn.classList.remove('active');
+
+        menuToggle.classList.remove('hide');
+    }
+    menuToggle.onclick = function(){
+
+        header.classList.toggle('open');
+
+        searchArea.classList.remove('active');
+
+        closeBtn.classList.remove('active');
+
+        searchBtn.classList.remove('active');
+    }
+</script>

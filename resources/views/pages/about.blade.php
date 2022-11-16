@@ -4,17 +4,14 @@
     <!-- TODO: This is filled with the About us page-->
 
 
-    <x-slot name="header">
+
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('About Us') }}
         </h2>
-    </x-slot>
 
 
-    <div class="image">
-        <h1>ABOUT US</h1>
-        <img src="img/YazTec_-_Yaseen.png" alt="">
-    </div>
+
+
 
     <div class = "ourPurpose">
         <h1>OUR PURPOSE</h1>
