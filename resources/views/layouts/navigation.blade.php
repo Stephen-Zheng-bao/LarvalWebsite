@@ -48,7 +48,7 @@
 
 
 
-                        @if(Auth::user()->name == "admin")
+                        @if(Auth::user()->adminid == 1)
                                     <x-nav-link :href="route('Admin')" :active="request()->routeIs('Admin')">
                                         <ion-icon name="people-circle-outline">
                                     </x-nav-link>
