@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('productName');
             $table->decimal('productCost');
             $table->integer('productQuantity');
-            $table->tinyText('productQuantity');
-            $table->integer('productQuantity');
+            $table->tinyText('productDescription');
+            $table->integer('productRating');
             $table->timestamps();
         });
     }
