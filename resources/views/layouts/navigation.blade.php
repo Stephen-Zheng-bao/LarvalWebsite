@@ -11,6 +11,7 @@
             <div class="flex">
                 <header>
                 <!-- Logo -->
+
                 <a href="#" class="brand">YazTec</a>
 
                 <a href="{{ route('dashboard') }}">
@@ -22,8 +23,11 @@
 
                 <div class="family">
 
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href=" url('/') ">
                         {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Product') }}
                     </x-nav-link>
                     <x-nav-link :href="route('About')" :active="request()->routeIs('About')">
                         {{ __('About') }}
@@ -69,9 +73,9 @@
                         <x-nav-link :href="route('register')" >
                             Register
                         </x-nav-link>
-                    
+
                     @endauth
-                    <div class="search">
+{{--                    <div class="search">
 				        <span class="ionicons">
 					        <ion-icon name="search-outline" class="searchBtn"></ion-icon>
 					        <ion-icon name="close-outline" class="closeBtn"></ion-icon>
@@ -79,13 +83,20 @@
                     </div>
 
             </div>
-            <div class="searchArea">
-                <input type="text" placeholder="Type here . . ."
-                       div>
-                </header>
 
 
-            <!-- TODO: Nav Bar need to fixed-->
+                    <div class="searchArea">
+                        <form action="{{route('item.index')}}" method="post">
+
+                            <input type="text" placeholder="Type here . . ." div>
+                        </form>
+
+
+
+                </header>--}}
+
+
+
 
 
             <!-- Settings Dropdown -->
@@ -197,7 +208,7 @@
     let menuToggle = document.querySelector('.menuToggle');
 
 
-    searchBtn.onclick = function(){
+/*    searchBtn.onclick = function(){
 
         header.classList.remove('open');
 
@@ -219,7 +230,7 @@
         searchBtn.classList.remove('active');
 
         menuToggle.classList.remove('hide');
-    }
+    }*/
     menuToggle.onclick = function(){
 
         header.classList.toggle('open');
