@@ -16,6 +16,7 @@
 <div class="Header">
     <div class = "Main-Info">
     <img src="{{URL::asset('/image/thumbnail_Index3.jpg')}}" alt="Main Pic" width=100% height= >
+</div>
 
 
 

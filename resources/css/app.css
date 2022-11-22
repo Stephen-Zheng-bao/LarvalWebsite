@@ -453,3 +453,8 @@ input[type=text]{
 .checked{
     color: orange;
 }
+.Main-Info img{
+    width: 1440px;
+    height:570px;
+
+}
