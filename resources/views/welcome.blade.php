@@ -8,13 +8,14 @@
     <!-- Stylesheet for product stars -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <title>YazTec Peripherals & More !</title>
 
-<head>
+
 
 <div class="Header">
     <div class = "Main-Info">
-    <img id ="Start" src="https://imageio.forbes.com/specials-images/imageserve/5f6a8cf1589fbdf9f18e6ca2/left-to-right--Razer-BlackShark-V2-Pro--Razer-BlackWidow-V3-Pro--Razer-DeathAdder-V2/960x0.jpg?format=jpg" alt="Main Pic" width=100%  >
+    <img src="{{URL::asset('/image/thumbnail_Index3.jpg')}}" alt="Main Pic" width=100% height= >
 
 
 
