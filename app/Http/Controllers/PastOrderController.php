@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PastOrder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PastOrderController extends Controller
 {
@@ -35,8 +36,15 @@ class PastOrderController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate();
-        DB::insert('insert into PastOrder (id, name) values (?, ?)', [1, 'Marc']);
+        \items::add([
+            'user_id' => $request->userid,
+            'item_id' => $request->itemid,
+            'quantity' => $request->quantity
+        ]);
+
+        session()->flash('success', 'Product is Added to Cart Successfully !');
+        return redirect()->route('dashboard');
+
 
 
     }

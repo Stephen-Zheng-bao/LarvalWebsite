@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\item;
 use Illuminate\Http\Request;
 use Illuminate\Http\Testing\MimeType;
+use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
@@ -15,18 +16,38 @@ class ItemController extends Controller
      */
     public function showProduct()
     {
-
+        $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
+        return view('/dashboard')->with('items', $items);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function index(Request $request)
     {
-        //
+        $items = DB::select('select * from items where productName = ?', [$request->filter]);
+        return view('/dashboard', ['item' => $items]);
     }
+
+   /* public function filter(Request $request)
+    {
+        $items = DB::select('select * from items where productName = ?', [$request->filter]);
+        return view('/dashboard', ['item' => $items]);
+    }
+
+    public function search(Request $request)
+    {
+        $items = DB::select('select * from items where productName like ?', [$request->search]);
+
+        return view('/dashboard', ['item' => $items]);
+    }*/
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Store a newly created resource in storage.

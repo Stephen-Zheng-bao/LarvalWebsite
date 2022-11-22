@@ -20,25 +20,38 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', function () {
-    $items = DB::table('items')->select('productName','productCost','productQuantity','productDescription','productRating')->get();
-    return view('welcome')->with('items', $items);
+    return view('welcome');
 });
 
 
-Route::get('/dashboard', function () {
-    $items = DB::table('items')->select('productName','productCost','productQuantity','productDescription','productRating')->get();
+/*Route::get('/dashboard', function () {
+    $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
     return view('dashboard')->with('items', $items);
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');*/
 
-Route::resource("items",ItemController::class);
+Route::get('/dashboard',[ItemController::class,"showProduct"])->name("dashboard");
+
+
+
+Route::resource('item',ItemController::class)->only(['index']);
+
+
+
+
 
 Route::get("/About", [AboutController::class,"about"])->name("About");
 
 Route::get("/Contact", [ContactController::class,"contact"])->name("Contact");
 
-Route::get("/Admin", [AdminController::class,"admin"])->name("Admin");
-Route::get("/Basket", [BasketController::class,"basket"])->name("Basket");
-Route::get("/Order", [OrderController::class,"order"])->name("Order");
+Route::get("/Admin", [AdminController::class,"admin"])->middleware(['auth'])->name("Admin");
+Route::get("/Basket", [BasketController::class,"basket"])->middleware(['auth'])->name("Basket");
+Route::get("/Order", [OrderController::class,"order"])->middleware(['auth'])->name("Order");
 
+
+
+/*Route::post('basket', [BasketController::class, 'addToBasket'])->name('basket.store');
+Route::post('update-basket', [BasketController::class, 'updateBasket'])->name('basket.update');
+Route::post('remove', [BasketController::class, 'removeBasket'])->name('basket.remove');
+Route::post('clear', [BasketController::class, 'clearAllBasket'])->name('basket.clear');*/
 
 require __DIR__.'/auth.php';
