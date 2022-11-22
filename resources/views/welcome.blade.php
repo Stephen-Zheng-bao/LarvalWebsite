@@ -14,7 +14,7 @@
     
 <div class="Header"> 
     <div class = "Main-Info">
-    <img src="Images/Index3.jpg" width="1440" height="600">
+    <img src="Images/Index3.jpg" width="100%" height="600">
 
   
 
