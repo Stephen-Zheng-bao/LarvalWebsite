@@ -130,22 +130,11 @@
             <br>
             <br>
         <STYLE>A {text-decoration: none;} </STYLE>
-        <p>Copyright © 2022 YazTec Incorporated UK & USA</p>
-
-
-
-
-
+        <p >Copyright © 2022 YazTec Incorporated UK & USA</p>
     </div>
     </footer>
 
-
-
-
-
-
     </div>
-
 
 </body>
 
