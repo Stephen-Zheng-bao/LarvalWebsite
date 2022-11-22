@@ -4,90 +4,13 @@
 <html lang=en;>
 <head>
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app.css">
     <!-- Stylesheet for product stars -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>YazTec Peripherals & More !</title>
       
-    <body>
-    
-        <header>
-            <a href="#" class="brand">YazTec</a>
-            <div class="family">
-                <ul class="nav">
-                    <li><a href="#">Home</ion-icon></a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="">Products</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="people-circle-outline"></ion-icon></a>
-                </ul>
-    
-    
-                <div class="search">
-                    <span class="ionicons">
-                        <ion-icon name="search-outline" class="searchBtn"></ion-icon>
-                        <ion-icon name="close-outline" class="closeBtn"></ion-icon>
-                    </span>
-                </div>
-                <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
-            </div>
-            <!-- <div class="searchArea">
-                <input type="text" placeholder="Type here . . ."
-            div> -->
-        </header>
-        <script>
-
-            let header = document.querySelector('header');
-    
-            let searchBtn = document.querySelector('.searchBtn');
-    
-            let closeBtn = document.querySelector('.closeBtn');
-    
-            let searchArea = document.querySelector('.searchArea');
-    
-            let nav = document.querySelector('.nav');
-    
-            let menuToggle = document.querySelector('.menuToggle');
-       
-    
-            searchBtn.onclick = function(){
-    
-                header.classList.remove('open');
-    
-                searchArea.classList.add('active');
-    
-                closeBtn.classList.add('active');
-    
-                searchBtn.classList.add('active');
-    
-                menuToggle.classList.add('hide');
-    
-            }
-            closeBtn.onclick = function(){
-    
-                searchArea.classList.remove('active');
-    
-                closeBtn.classList.remove('active');
-    
-                searchBtn.classList.remove('active');
-    
-                menuToggle.classList.remove('hide');
-            }
-            menuToggle.onclick = function(){
-    
-                header.classList.toggle('open');
-               
-                searchArea.classList.remove('active');
-               
-                closeBtn.classList.remove('active');
-               
-                searchBtn.classList.remove('active');
-            }
-        </script>
-       
-    </body>
+<head>
     
 <div class="Header"> 
     <div class = "Main-Info">
