@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('productName');
             $table->integer('productQuantity');
             $table->decimal('productCost');
+            $table->string('productType');
             $table->tinyText('productDescription');
             $table->integer('productRating');
             $table->timestamps();
