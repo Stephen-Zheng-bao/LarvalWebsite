@@ -16,7 +16,7 @@ class ItemController extends Controller
      */
     public function showProduct()
     {
-        $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
+        $items = DB::table('items')->select('id','productName','productQuantity','productCost','productType','productImage','productDescription','productRating')->get();
         return view('/dashboard')->with('items', $items);
     }
 

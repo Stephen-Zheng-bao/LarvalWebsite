@@ -44,14 +44,17 @@ Route::get("/About", [AboutController::class,"about"])->name("About");
 Route::get("/Contact", [ContactController::class,"contact"])->name("Contact");
 
 Route::get("/Admin", [AdminController::class,"admin"])->middleware(['auth'])->name("Admin");
-Route::get("/Basket", [BasketController::class,"basket"])->middleware(['auth'])->name("Basket");
+
 Route::get("/Order", [OrderController::class,"order"])->middleware(['auth'])->name("Order");
 
 
+Route::get("/Basket", [BasketController::class,"basket"])->middleware(['auth'])->name("Basket");
+Route::get("basket", [BasketController::class,"basketList"])->middleware(['auth'])->name("basket.list");
 
-/*Route::post('basket', [BasketController::class, 'addToBasket'])->name('basket.store');
+
+Route::post('basket', [BasketController::class, 'addToBasket'])->name('basket.store');
 Route::post('update-basket', [BasketController::class, 'updateBasket'])->name('basket.update');
 Route::post('remove', [BasketController::class, 'removeBasket'])->name('basket.remove');
-Route::post('clear', [BasketController::class, 'clearAllBasket'])->name('basket.clear');*/
+Route::post('clear', [BasketController::class, 'clearAllBasket'])->name('basket.clear');
 
 require __DIR__.'/auth.php';

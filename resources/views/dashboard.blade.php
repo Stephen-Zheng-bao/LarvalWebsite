@@ -25,6 +25,11 @@
                 </div>
             </div>
         </div>
+        @if ($message = Session::get('success'))
+            <div class="p-4 mb-3 bg-green-400 rounded">
+                <p class="text-green-800">{{ $message }}</p>
+            </div>
+        @endif
 
 
         <div class="productsContainer">
@@ -37,9 +42,19 @@
                         <h3>{{ $item-> productName}}</h3>
                         <p>{{ $item-> productDescription }}</p>
                         <div class="product-Cost">£{{ $item-> productCost}}</div>
-                        <div class="buttons">
-                            <a href="" class="cart">Add to cart</a>
-                        </div>
+                        @auth
+                        <form action="{{ route('basket.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @auth
+                                <input type="hidden" value="{{ Auth::user()->id }}" name="user">
+                            @endauth
+                            <input type="hidden" value="{{ $item->id }}" name="item">
+                            <input type="hidden" value="{{ $item->productName }}" name="name">
+                            <input type="hidden" value="{{ $item->productCost }}" name="price">
+                            <input type="hidden" value="1" name="quantity">
+                            <x-primary-button class="cart">Add To Cart</x-primary-button>
+                        </form>
+                        @endauth
                         {{--@for ($i = 0; $i < 10; $i++)
                             The current value is {{ $i }}
                         @endfor--}}
