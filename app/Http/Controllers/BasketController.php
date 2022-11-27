@@ -6,6 +6,7 @@ use App\Models\Basket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use function PHPUnit\Framework\isEmpty;
 
 class BasketController extends Controller
 {
@@ -15,8 +16,9 @@ class BasketController extends Controller
     {
         $user =  Auth::user()->id;
         $BasketItems = DB::table('basket')->select('id','user_id','item_id','productName','price','orderQuantity')->where("user_id","=",$user)->get();
+        $totalCost = DB::select('select SUM(price) from basket where user_id = ?',[$user]);
 
-        return view('pages.basket')->with('items', $BasketItems);;
+        return view('pages.basket')->with('items', $BasketItems);
     }
 
 
@@ -67,7 +69,20 @@ class BasketController extends Controller
         return redirect()->route('Basket');
     }
 
+    public function submitBasket(Request $request)
 
+    {
+
+        DB::insert('insert into past_orders (user_id,item_id,productName,price,orderQuantity) select user_id,item_id,productName,price,orderQuantity from basket where user_id = ?',
+            [$request->id]);
+
+        DB::delete('delete from basket where user_id = ?',
+            [$request->id]
+        );
+        session()->flash('success', 'Items has been Purchased !');
+
+        return redirect()->route('Basket');
+    }
 
 
 
