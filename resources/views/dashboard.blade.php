@@ -17,13 +17,46 @@
 
             <div class="filterInline">
                 <div id="productButtons">
-                    <button class="buttonValue">All</button>
-                    <button class="buttonValue">HeadSet</button>
-                    <button class="buttonValue">Keyboards</button>
-                    <button class="buttonValue">Mouse</button>
-                    <button class="buttonValue">Monitors</button>
+                    <table>
+                        <tr>
+                    <form action="{{ route('dashboard') }}" method="GET">
+
+                        <input type="hidden" value="All" name="filter">
+                        <button :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="buttonValue">All</button>
+                    </form>
+                            </tr>
+                        <tr>
+                    <form action="{{ route('filter') }}" method="GET">
+                        @csrf
+                        <input type="hidden" value="HeadSet" name="filter">
+                        <button class="buttonValue">HeadSet</button>
+                    </form>
+                        </tr>
+                        <tr>
+                    <form action="{{ route('filter') }}" method="GET">
+                        @csrf
+                        <input type="hidden" value="Keyboard" name="filter">
+                        <button class="buttonValue">Keyboard</button>
+                    </form>
+                        </tr>
+                        <tr>
+                    <form action="{{ route('filter') }}" method="GET">
+                        @csrf
+                        <input type="hidden" value="Mouse" name="filter">
+                        <button class="buttonValue">Mouse</button>
+                    </form>
+                        </tr>
+                        <tr>
+                    <form action="{{ route('filter') }}" method="GET">
+                        @csrf
+                        <input type="hidden" value="Monitor" name="filter">
+                        <button class="buttonValue">Monitor</button>
+                    </form>
+                        </tr>
+                    </table>
                 </div>
             </div>
+
         </div>
         @if ($message = Session::get('success'))
             <div class="p-4 mb-3 bg-green-400 rounded">
@@ -38,7 +71,7 @@
 
                     <div class="popup" data-target="{{ $item->id}}">
                         <i class="fas fa-times"></i>
-                        <img src="" alt="">
+                        <img src="{{ URL::asset('/image/YazTec.png')}}" alt="">
                         <h3>{{ $item-> productName}}</h3>
                         <p>{{ $item-> productDescription }}</p>
                         <div class="product-Cost">£{{ $item-> productCost}}</div>
@@ -55,9 +88,6 @@
                             <x-primary-button class="cart">Add To Cart</x-primary-button>
                         </form>
                         @endauth
-                        {{--@for ($i = 0; $i < 10; $i++)
-                            The current value is {{ $i }}
-                        @endfor--}}
                     </div>
 
             @endforeach
@@ -65,7 +95,7 @@
 
             @foreach ($items as $item)
             <div class="product" data-name="{{ $item->id}}">
-                <img src="" alt="">
+                <img src="{{URL::asset('/image/YazTec.png')}}" alt="" id="my_image">
                 <h3><h3>{{ $item-> productName}}</h3></h3>
                 <div class="product-Cost">£{{ $item-> productCost}}</div>
             </div>
