@@ -55,6 +55,7 @@
                         </tr>
                     </table>
                 </div>
+            </div>
 
                 <div class="filterInline">
                     <div class="productSearchBar">
@@ -62,7 +63,7 @@
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
-      </div>
+        </div>
 
             </div>
 
