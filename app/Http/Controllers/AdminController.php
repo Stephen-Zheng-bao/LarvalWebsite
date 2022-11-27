@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Http\Testing\MimeType;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -11,7 +13,11 @@ class AdminController extends Controller
 
     public function admin()
     {
-        return view('pages.admin');
+        $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
+        $users = DB::table('Users')->select('name','email')->get();
+        $past = DB::table('past_orders')->select('user_id','item_id','orderQuantity')->get();
+        return view('pages.admin')->with('items',$items)->with('users',$users)->with('past',$past);
+
     }
 
 
@@ -36,6 +42,13 @@ class AdminController extends Controller
     public function index()
     {
         //
+    }
+
+    public function adminEdit(Request $request)
+    {
+        $itemID = $request->productID;
+        $item = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->where('id','=',$itemID)->get();
+        return view('pages.adminEdit')->with('item',$item);
     }
 
     /**
@@ -76,9 +89,20 @@ class AdminController extends Controller
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admin $admin)
-    {
-        //
+    public function edit(Request $request){
+        $pname = $request->pname;
+        $pcost = $request->pcost;
+        $pquantity =$request->pquantity;
+        $description = $request->pdescription;
+        $prate = $request->prate;
+        $id = $request->pid;
+        $affected = DB::table('items')
+                        ->where('id', $id)
+                        ->update(['productName' => $pname],['productCost' =>$pcost],['productQuantity'=>$pquantity],['productDescription'=> $description],['productRating'=>$prate]);
+        $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
+        $users = DB::table('Users')->select('name','email')->get();
+        $past = DB::table('past_orders')->select('user_id','item_id','orderQuantity')->get();
+        return view('pages.admin')->with('items',$items)->with('users',$users)->with('past',$past);
     }
 
     /**

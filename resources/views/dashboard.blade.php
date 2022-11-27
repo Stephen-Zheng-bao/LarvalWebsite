@@ -19,8 +19,8 @@
                                     <div class="flex-1">
                                     {{--<img src="{{ url($product->image) }}" alt="" class="w-full max-h-60">--}}
                                         <p class="mt-4 text-lg text-gray-900">Product: {{ $item-> productName}}</p>
-                                        <p class="mt-4 text-lg text-gray-900">Cost: {{ $item-> productCost}}</p>
-                                        <p class="mt-4 text-lg text-gray-900">Quantity: £{{ $item-> productQuantity}}</p>
+                                        <p class="mt-4 text-lg text-gray-900">Cost: £{{ $item-> productCost}}</p>
+                                        <p class="mt-4 text-lg text-gray-900">Quantity: {{ $item-> productQuantity}}</p>
                                         <p class="mt-4 text-lg text-gray-900">Description: {{ $item-> productDescription }}</p>
                                         <p class="mt-4 text-lg text-gray-900">Rating: {{ $item-> productRating }} Star</p>
                                     </div>

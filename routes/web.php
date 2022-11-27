@@ -23,6 +23,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Admin', function () {
+    return view('Admin');
+});
+
+Route::get('/adminEdit', function () {
+    return view('adminEdit');
+});
+
 
 /*Route::get('/dashboard', function () {
     $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
@@ -46,8 +54,8 @@ Route::get("/Contact", [ContactController::class,"contact"])->name("Contact");
 Route::get("/Admin", [AdminController::class,"admin"])->middleware(['auth'])->name("Admin");
 Route::get("/Basket", [BasketController::class,"basket"])->middleware(['auth'])->name("Basket");
 Route::get("/Order", [OrderController::class,"order"])->middleware(['auth'])->name("Order");
-
-
+Route::get("/adminEdit",[AdminController::class,"adminEdit"])->middleware(['auth'])->name('adminEdit');
+Route::get('/adminEdit',[AdminController::class,'edit'])->middleware(['auth'])->name('admim');
 
 /*Route::post('basket', [BasketController::class, 'addToBasket'])->name('basket.store');
 Route::post('update-basket', [BasketController::class, 'updateBasket'])->name('basket.update');
