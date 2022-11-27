@@ -20,20 +20,10 @@ class ItemController extends Controller
         return view('/dashboard')->with('items', $items);
     }
 
-
-
-
-    public function filter(Request $request)
+    public function index(Request $request)
     {
-        $items = DB::select('select * from items where productType = ?', [$request->filter]);
-        return view('/dashboard')->with('items', $items);
-    }
-
-
-    public function search(Request $request)
-    {
-        $items = DB::select('select * from items where productName like %?%', [$request->search]);
-        return view('/dashboard')->with('items', $items);
+        $items = DB::select('select * from items where productName = ?', [$request->filter]);
+        return view('/dashboard', ['item' => $items]);
     }
 
    /* public function filter(Request $request)

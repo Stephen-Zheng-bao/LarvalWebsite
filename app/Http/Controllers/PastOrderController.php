@@ -36,6 +36,13 @@ class PastOrderController extends Controller
      */
     public function store(Request $request)
     {
+        /*items::add([
+            'user_id' => $request->userid,
+            'item_id' => $request->itemid,
+            'quantity' => $request->quantity
+        ]);*/
+
+        session()->flash('success', 'Product is Added to Cart Successfully !');
         return redirect()->route('dashboard');
 
 

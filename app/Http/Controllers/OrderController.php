@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -13,10 +11,7 @@ class OrderController extends Controller
 
     public function order()
     {
-        $user =  Auth::user()->id;
-        $orders = DB::table('past_orders')->select('id','user_id','item_id','productName','price','orderQuantity')->where("user_id","=",$user)->get();
-
-        return view('pages.order')->with('orders', $orders);
+        return view('pages.order');
     }
 
 

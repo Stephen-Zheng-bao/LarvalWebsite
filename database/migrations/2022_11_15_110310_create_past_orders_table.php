@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->cascadeOnDelete();
             $table->foreignId('item_id')->cascadeOnDelete();
-            $table->string('productName');
-            $table->integer("price");
             $table->integer("orderQuantity");
             $table->timestamps();
         });
