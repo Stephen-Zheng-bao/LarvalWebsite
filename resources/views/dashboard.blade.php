@@ -54,15 +54,21 @@
                     </form>
                         </tr>
                     </table>
-                </div>
 
-                <div class="filterInline">
-                    <div class="productSearchBar">
-                        <input type="text" placeholder="Search..." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                <form action="{{route('search')}}" method="GET">
+                <div class="container my-5 py-5 px-5 mx-5">
+                    <div class="wrap">
+                        <div class="search">
+                            <input name = "search" type="search" class="searchTerm" placeholder="What are you looking for?">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-      </div>
+
 
             </div>
 
@@ -104,7 +110,7 @@
 
             @foreach ($items as $item)
             <div class="product" data-name="{{ $item->id}}">
-                <img src="{{URL::asset('/image/YazTec.png')}}" alt="" id="my_image">
+                <img src="" alt="" id="my_image">
                 <h3><h3>{{ $item-> productName}}</h3></h3>
                 <div class="product-Cost">£{{ $item-> productCost}}</div>
             </div>

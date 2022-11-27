@@ -32,7 +32,8 @@ class ItemController extends Controller
 
     public function search(Request $request)
     {
-        $items = DB::select('select * from items where productName like %?%', [$request->search]);
+        $search = $request->search;
+        $items = DB::select('select * from items where productName like ?', ["%".$search."%"]);
         return view('/dashboard')->with('items', $items);
     }
 

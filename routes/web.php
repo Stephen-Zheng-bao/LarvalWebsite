@@ -52,6 +52,7 @@ Route::get("/Basket", [BasketController::class,"basket"])->middleware(['auth'])-
 Route::get("basket", [BasketController::class,"basketList"])->middleware(['auth'])->name("basket.list");
 
 Route::get("filter",[ItemController::class,"filter"])->name("filter");
+Route::get("search",[ItemController::class,"search"])->name("search");
 
 Route::post('basket', [BasketController::class, 'addToBasket'])->name('basket.store');
 Route::post('update-basket', [BasketController::class, 'updateBasket'])->name('basket.update');
