@@ -5,17 +5,18 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'kumbh Sans', sans-serif;
-}
+    font-family: 'kumbh Sans', sans-serif;}
 
+
+
+
+/*This is the About Us CSS*/
 .ourPurpose{
     width: 100%;
     min-height: 220px;
 
 }
-label{
-    display: inline-block;
-}
+
 .ourPurpose h1{
     align-items: center;
     text-align: center;
@@ -64,20 +65,9 @@ label{
 
 }
 
-.footer{
-    width: 100%;
-    position: relative;
-    height: 156px;
-}
 
-.footer h1{
-    color: white;
-    align-items: center;
-    text-align: center;
-    padding: 45px;
-    font-size:40px;
-}
 
+/*This is the Navergation bar CSS*/
 
 /* The body of the website */
 body {
@@ -355,12 +345,11 @@ header .search {
     color:red;
 }
 
-.Products
- a{
+.Products a{
     font-style: bold;
     color:red;
 }
-
+/*This is the Home page CSS*/
 *{
     margin: 0;
     padding: 0;
@@ -369,12 +358,8 @@ header .search {
     font-family: 'kumbh Sans', sans-serif;
 }
 
-/* The body of the website */
-body {
-    min-height: 110vh;
 
-    background: white;
-}
+
 .footer{
     position: absolute;
     top: 150%;
@@ -405,7 +390,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 form {
   font-family: Arial;
 }
-/**input[type=text]{
+input[type=text]{
     width: 15%;
     padding: 12px;
     margin: 8px 0;
@@ -455,4 +440,14 @@ form {
 .Main-Info img{
     width: 1440px;
     height:570px;
+
+}
+
+#productButtons button{
+    border: 1.5px solid black;
+    padding: 0.5em 2em;
+    border-radius: 1em;
+    color: #6a88ed;
+    cursor: pointer;
+    margin-bottom: 15px;
 }

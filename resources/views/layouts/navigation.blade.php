@@ -12,11 +12,7 @@
                 <header>
                 <!-- Logo -->
 
-                <a href="#" class="brand">YazTec</a>
-
-                <a href="{{ route('dashboard') }}">
-                    <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
-                </a>
+                <a href="/" class="brand">YazTec</a>
 
 
                 <!-- Navigation Links -->
