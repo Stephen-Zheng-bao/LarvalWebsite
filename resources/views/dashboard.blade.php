@@ -55,6 +55,15 @@
                         </tr>
                     </table>
                 </div>
+
+                <div class="filterInline">
+                    <div class="productSearchBar">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+      </div>
+
             </div>
 
         </div>
