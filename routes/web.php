@@ -23,6 +23,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Admin', function () {
+    return view('Admin');
+});
+
+Route::get('/adminEdit', function () {
+    return view('adminEdit');
+});
+
 
 /*Route::get('/dashboard', function () {
     $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();

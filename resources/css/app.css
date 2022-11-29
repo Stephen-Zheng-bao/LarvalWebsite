@@ -5,7 +5,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'kumbh Sans', sans-serif;}
 
 html{
@@ -13,68 +12,157 @@ html{
     font-size: 76%
 }
 
-img{scale:90%}
 
 
 /*This is the About Us CSS*/
-.ourPurpose{
-    width: 100%;
-    min-height: 220px;
+body{
+    /* do font here */
 
+    background-color: #f4f4f4;
+    align-content: center;
+    min-height: 100vh;
+    display: grid;
+   
 }
-html{
-
-    overflow-x: hidden;
+section{
+    
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
 }
 
+.image{
+    
+    background: url("/img/YazTec2.png") center/cover no-repeat;
+    background-color: rgb(255, 255, 255);
+    background-size: 520px;
+}
+.content{
 
-.ourPurpose h1{
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    display: flex;
+    background: rgb(255, 255, 255);
+    
+   
+}
+
+.content h2{
+
+    letter-spacing: 8px;
+    opacity: 1;
+    text-transform: uppercase;
+    font-size: 40px;
+    
+}
+.content span{
+    
+    color: rgb(100, 100, 205);
+    width: 80px;
+    margin: 30px 0;
+}
+.content p{
+    
+    width: 65%;
+    line-height: 1.8;
     text-align: center;
-    font-size:40px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-weight: 300;
+    opacity: 0.8;
 }
-
-.ourPurpose p{
-    align-items: center;
+.links{
+    margin: 18px 0;
+}
+.links li{
+  
+    padding: 12px 16px;
+    width: 170px;
     text-align: center;
-    font-size: 19px;
-
+    border: 0.8px solid rgb(8, 8, 8);
+    list-style: none;
+    border-radius: 6px;
+}
+.links li a{
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.links li:hover{
+    border-color: rgb(100, 100, 205);
+}
+.links li:hover a{
+    color :rgb(100, 100, 205);
+}
+.vertical-line{
+  
+    background: rgb(0, 0, 0);
+    margin: 0 auto;
+    height: 35px;
+    width: 0.5px;
+}
+.icons{
+    display: flex;
+    padding: 5px 0;
+}
+.icons li{
+   
+    margin: 8px;
+    display: block;
+    padding: 10px;
+}
+.icons li i{
+    opacity: 0.6;
+    font-size: 28px;
+}
+.icons li i:hover{
+    color: rgb(100, 100, 205);
 }
 
-.ourVision{
-    width: 100%;
-    min-height: 210px;
+
+
+/*****************/
+
+@media(max-width: 992px){
+    section{
+        width: 100%;
+        grid-template-columns: 1fr;
+     
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 25px;
+        margin-top: 60px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
 }
 
-.ourVision h1{
-    align-items: center;
-    text-align: center;
-    font-size:40px;
-}
-
-.ourVision  p{
-    align-items: center;
-    text-align: center;
-    font-size: 19px;
-}
-
-.ourStatement{
-    width: 100%;
-    min-height: 210px;
-}
-
-.ourStatement h1{
-    align-items: center;
-    text-align: center;
-    font-size:40px;
-}
-
-.ourStatement p{
-    align-items: center;
-    text-align: center;
-    font-size: 19px;
-
-}
 
 
 
@@ -398,7 +486,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     justify-content: center;
     align-items: center;
 }
-
+form {
+  font-family: Arial;
+}
 input[type=text]{
     width: 15%;
     padding: 12px;
@@ -406,11 +496,10 @@ input[type=text]{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    position: absolute;
     top: 145%;
     left: 47%;
     transform: translate(-50%, -50%);
-  }
+  }**/
   input[type=submit]{
     padding: 4px 15px;
     border-radius: 20px;
@@ -449,359 +538,8 @@ input[type=text]{
     color: orange;
 }
 .Main-Info img{
-    width: 100%;
-
-    max-height:570px;
-    align-items: center;
-    display: flex;
-    align-content: center;
-
-}
-
-/*This is the Contact Us CSS*/
-section {
-    padding: 45px 15%;
-}
-
-
-.container .links {
-
-    line-height: 1em;
-    font-weight: 510;
-    margin-top: 52px;
-    padding-left: 12px;
-    color: rgb(39, 36, 36);
-    border-left: 52px solid rgb(100, 100, 205);;
-}
-
-.icons {
-
-    gap: 28px;
-    margin: 18px 0;
-    display: flex;
-    position: relative;
-}
-
-.icons li {
-    list-style: none;
-}
-
-.icons li a {
-
-    font-size: 2em;
-    transition: 0.5s;
-    color: rgb(0, 0, 0);
-}
-
-.icons li a:hover {
-    color: rgb(100, 100, 205);
-}
-
-.contact-us{
-
-
-    height: 100%;
-    width: 100%;
-    grid-gap: 5rem;
-    display: grid;
-    align-items: center;
-    background: #eff7f7;
-    min-height: 100vh;
-    grid-template-columns: repeat(2, 2fr);
-}
-
-.yaztec-contact-img img{
-
-    height: auto;
-    max-width: 100%;
-    width: 740px;
-    border-radius: 25px;
-}
-
-.yaztec-contact-form h1{
-
-    font-size: 85px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    margin-bottom: 25px;
-}
-
-span{
-    color: rgb(100, 100, 205);
-}
-
-.yaztec-contact-form form{
-    position: relative;
-}
-
-.yaztec-contact-form input, form textarea{
-
-    background: #c1c0c3;
-    color: #3d2020;
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 20px;
-    font-size: 1.2rem;
-    border-radius: 12px;
-    margin-bottom: 0.6rem;
-}
-.yaztec-contact-form textarea{
-
-    height: 230px;
-    resize: none;
-}
-.yaztec-contact-form form .Sub-button{
-
-    width: 222px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 12px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: ease .30s;
-    text-transform: uppercase;
-    border: 3px solid transparent;
-    display: inline-block;
-    background:  #89899d;
-}
-.yaztec-contact-form form .Sub-button:hover{
-
-    transform: scale(1.0001);
-    border: 3px solid rgb(0, 0, 0);
-    background: transparent;
-
-}
-
-
-@media(max-width:1580px){
-    section{
-
-        transition: .3s;
-        padding: 85px 3%;
-
-    }
-    .yaztec-contact-form h1{
-        font-size: 65px;
-    }
-    .yaztec-contact-form p{
-        margin-bottom: 1rem;
-    }
-}
-@media (max-width: 1240px){
-    .contact-us{
-
-        transition: .6s;
-        grid-gap: 2rem;
-    }
-}
-@media (max-width:1200px){
-    .contact-us{
-        grid-template-columns: 2fr;
-    }
-    .yaztec-contact-form{
-        order: 2;
-    }
-    .yaztec-contact-img img{
-
-        width: 100%;
-        max-width: 100% ;
-        height: auto;
-        text-align: center;
-        margin-bottom: 28px;
-    }
-}
-/*Product page*/
-
-
-
-
-
-.container{
-    max-width: 1200px;
-    margin:0 auto;
-    padding:3rem 2rem;
-
-
-
-}
-
-
-
-.container .title{
-    font-size: 3.5rem;
-    color:#444;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.container .productsContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:2rem;
-}
-
-.container .productsContainer .product{
-    text-align: center;
-    padding:1rem 2rem;
-    background: white;
-    box-shadow: 0 .5rem 5rem rgba(0,0,255,.1);
-    cursor: pointer;
-}
-
-.container .productsContainer .product:hover{
-    outline: .2rem solid black;
-}
-
-.container .productsContainer .product img{
-    height: 25rem;
-}
-
-.container .productsContainer .product:hover img{
-    transform: scale(.9);
-}
-
-.container .productsContainer .product h3{
-    padding:.5rem 0;
-    font-size: 2rem;
-    color:#444;
-
-}
-
-.container .productsContainer .product:hover h3{
-    color:#2d80c0;
-}
-
-.container .productsContainer .product .product-Cost{
-    font-size: 2rem;
-    color:#444;
-}
-
-.productsPopup{
-    position: fixed;
-    top:0; left:0;
-    min-height: 100vh;
-    width: 100%;
-    background: rgba(0,0,0, 0.8);
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.productsPopup .popup{
-    display: none;
-    padding:2rem;
-    text-align: center;
-    background: #fff;
-    position: relative;
-    margin:2rem;
-    width: 40rem;
-}
-
-.productsPopup .popup.active{
-    display: inline-block;
-}
-
-
-.productsPopup .popup img{
-    height: 30rem;
-}
-
-.productsPopup .popup .fa-times{
-    position: absolute;
-    top:1rem; right:1.5rem;
-    cursor: pointer;
-    color:#444;
-    font-size: 4rem;
-}
-
-.productsPopup .popup h3{
-    color:#444;
-    padding:.5rem 0;
-    font-size: 2.5rem;
-}
-
-.productsPopup .popup p{
-    line-height: 1.5;
-    padding:1rem 0;
-    font-size: 1.6rem;
-    color:#777;
-}
-
-.productsPopup .popup .product-Cost{
-    padding:1rem 0;
-    font-size: 2.5rem;
-    color:#3071bc;
-}
-
-.productsPopup .popup .buttons{
-    display: flex;
-    gap:1.5rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.productsPopup .popup .buttons a{
-    flex:1 1 16rem;
-    padding:1rem;
-    font-size: 1.8rem;
-    color:#444;
-    border:.1rem solid #444;
-}
-
-.productsPopup .popup .buttons a.cart{
-    background: #444;
-    color:#fff;
-}
-
-.productsPopup .popup .buttons a.cart:hover{
-    background: #111;
-}
-
-
-#costFilter{
-    font-weight: bold;
-    border: 1.5px solid black;
-    border-radius: 1em;
-    padding: 0.35em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-}
-
-#costFilter select{
-    width: 120px;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    color: #6a88ed;
-    background: transparent;
-    cursor: pointer;
-    text-align: center;
-}
-
-
-
-#filterSection{
-    display: flex;
-    justify-content: space-between;
-}
-
-.filterInline{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-
-#productButtons .buttonValue:hover{
-    background-color: #6a88ed;
-    color: #111;
-}
-
-
-
-.buttonValue{
-    transition-duration: 0.5s;
+    width: 1440px;
+    height:570px;
 
 }
 
