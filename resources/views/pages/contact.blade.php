@@ -35,6 +35,9 @@
 
         <div class="yaztec-contact-img">
             <img src="{{URL::asset('/image/YazTec.png')}}">
-</div>
+        </div>
+        </div>
     </section>
+    </body>
+    </head>
 </x-app-layout>
