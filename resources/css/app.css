@@ -435,14 +435,15 @@ input[type=text]{
 
 .Featured{
     position: absolute;
-    top: 240%;
+    top: 80%;
     left: 4%;
+ 
 
     display:flex;
     text-align: center;
     padding-top:5%;
     border-radius: 1px solid black;
-
+   
 }
 .checked{
     color: orange;
@@ -853,4 +854,8 @@ span{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.Welcome-Moto{
+    padding-right: 5px;
 }

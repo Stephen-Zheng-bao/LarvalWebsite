@@ -37,32 +37,28 @@
         </div>
     </div>
 </div>
-<div class="Welcome">
-<h1><u> Explore Our Frequently Bought Below</u></h1>
+
+<section id="moto">
+    <div id ="Welcome-Moto">
+        <br>
+        <h1><u>         Frequently Bought Prodcts!</u></h1>
+
+
+    </div>
+</section>
 
 <section id="Index_Products">
     <div class="Featured">
         <div class="col">
-          <h2>Mouses</h2>
-          <img src="{{URL::asset('Images/Prod1.jpg')}}" width="100%" height="40%">
-          <p> Razer Mouse <br>
-            Price: £79.99  <br>
-            <div id=Star>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-            </div>
-            <i class="fa fa-shopping-cart" style="font-size:36px"></i>
-             <br>
-            <br>
-        </div>
-        <div class="col">
-          <h2>Keyboards</h2>
-          <img src="{{URL::asset('Images/Prod1.jpg')}}" width="100%" height="40%">
+            <h2><u>Keyboards</u></h2>
+          <br>
+          <img src="Images/Prod1.jpg" width="60%" height="40%">
+          <br>
+          <br>
           <p> Keyboard <br>
+            <br>
             Price: £79.99  <br>
+            <br>
             <div id=Star>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
@@ -70,59 +66,63 @@
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
             </div>
+            <br>
             <i class="fa fa-shopping-cart" style="font-size:36px"></i>
         </div>
         <div class="col">
-            <h2>Headsets</h2>
-          <img src="{{URL::asset('Images/Prod1.jpg')}}" width="100%" height="40%">
-          <p> LED Headset<br>
-          Price: £79.99  <br>
-          <div id=Star>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-          </div>
-          <i class="fa fa-shopping-cart" style="font-size:36px"></i>
+          <h2><u>Mouses</u></h2>
+          <br>
+          <img src="Images/Prod2.jpg" width="60%" height="40%">
+          <br>
+          <br>
+          <p> Keyboard <br>
+            <br>
+            Price: £79.99  <br>
+            <br>
+            <div id=Star>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <br>
+            <i class="fa fa-shopping-cart" style="font-size:36px"></i>
         </div>
         <div class="col">
-            <h2>Headsets</h2>
-          <img src="{{URL::asset('Images/Prod1.jpg')}}" width="100%" height="40%">
-          <p> LED Headset<br>
-          Price: £79.99  <br>
-          <div id=Star>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-          </div>
-          <i class="fa fa-shopping-cart" style="font-size:36px"></i>
+            <h2><u>Headsets</u></h2>
+            <br>
+          <img src="Images/Prod3.jpg" width="60%" height="40%">
+          <br>
+          <br>
+          <p> Keyboard <br>
+            <br>
+            Price: £79.99  <br>
+            <br>
+            <div id=Star>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <br>
+            <i class="fa fa-shopping-cart" style="font-size:36px"></i>
         </div>
-      </div>
-    </div>
-
-</section>
-
-
-
-
-
-
-<div Section="News_Letter">
-    <form action="action_page.php">
-        <div class="News_Letter">
-          <h2>Subscribe For Crazy Discounts</h2>
         </div>
+      
 
-          <input type="text" placeholder="Email address" name="mail" required><input type="submit" value="Subscribe">
-
-        </div>
-      </form>
+           
 
 
-</div>
+
+
+
+
+
+
+
+</sectionid>
 
     <footer>
         <div class="footer">
