@@ -56,10 +56,17 @@ Route::get("/Admin", [AdminController::class,"admin"])->middleware(['auth'])->na
 Route::get("/Order", [OrderController::class,"order"])->middleware(['auth'])->name("Order");
 
 
+Route::get("/Basket", [BasketController::class,"basket"])->middleware(['auth'])->name("Basket");
+Route::get("basket", [BasketController::class,"basketList"])->middleware(['auth'])->name("basket.list");
+
+Route::get("filter",[ItemController::class,"filter"])->name("filter");
+Route::get("search",[ItemController::class,"search"])->name("search");
 
 Route::post('basket', [BasketController::class, 'addToBasket'])->name('basket.store');
 Route::post('update-basket', [BasketController::class, 'updateBasket'])->name('basket.update');
 Route::post('remove', [BasketController::class, 'removeBasket'])->name('basket.remove');
 Route::post('clear', [BasketController::class, 'clearAllBasket'])->name('basket.clear');
+Route::post('submit', [BasketController::class, 'submitBasket'])->name('basket.submit');
+
 
 require __DIR__.'/auth.php';
