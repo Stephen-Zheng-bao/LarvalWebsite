@@ -37,9 +37,9 @@
                                 <td class="hidden text-right md:table-cell"></td>
 
 
-                                <td class="justify-center mt-9 md:justify-end md:flex">
-                                    <div class="h-10 w-30">
-                                        <div class="relative flex flex-row w-full h-8">
+                                <td class="justify-center mt-2 md:justify-end md:flex">
+
+
 
                                             <form action="{{ route('basket.update') }}" method="POST">
                                                 @csrf
@@ -47,18 +47,14 @@
                                                 <input type="number" name="quantity" min=1 value="{{ $item->orderQuantity }}"
                                                        class="text-center bg-gray-300" />
 
-
-                                        </div>
-
-                                    </div>
                                     <x-primary-button type="submit" class="px-2 pb-2 ml-2 text-white bg-blue-500">update</x-primary-button>
                                     </form>
                                 </td>
 
                                 <td class="hidden text-right md:table-cell">
-                        <span class="text-sm font-medium lg:text-base">
-                            ${{ $item->price * $item->orderQuantity}}
-                        </span>
+                                    <span class="text-sm font-medium lg:text-base">
+                                        ${{ $item->price * $item->orderQuantity}}
+                                    </span>
                                 </td>
                                 <td class="hidden text-right md:table-cell">
                                     <form action="{{ route('basket.remove') }}" method="POST">

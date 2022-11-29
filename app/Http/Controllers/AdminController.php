@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use Illuminate\Http\Request;
-use Illuminate\Http\Testing\MimeType;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
@@ -13,13 +12,35 @@ class AdminController extends Controller
 
     public function admin()
     {
-        $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
-        $users = DB::table('Users')->select('name','email')->get();
-        $past = DB::table('past_orders')->select('user_id','item_id','orderQuantity')->get();
+        $items = DB::table('items')->select('id','productName','productQuantity','productCost','productDescription','productRating')->get();
+        $users = DB::table('users')->select('id','name','email')->get();
+        $past = DB::table('past_orders')->select('id','user_id','item_id','productName','price','orderQuantity')->get();
         return view('pages.admin')->with('items',$items)->with('users',$users)->with('past',$past);
-
     }
 
+
+    public function editAdmin(Request $request){
+        $id = $request->pid;
+        $items = DB::table('items')->select('id','productName','productQuantity','productCost','productDescription','productRating')->where('id',$id)->get();
+        return view('pages.editAdmin')->with('items',$items);
+    }
+
+    public function edit(Request $request)
+    {
+
+        $id=$request->pid;
+        $name=$request->pname;
+        $cost=$request->pcost;
+        $description=$request->pdescription;
+        $quantity=$request->pquantity;
+        $rate=$request->prate;
+        $items = DB::table('items')->select('id','productName','productQuantity','productCost','productDescription','productRating')->where('id',$id)->get();
+        $q = ['productName' => $name,'productQuantity'=>$quantity,'productCost'=>$cost,'productDescription'=>$description,'productRating'=>$rate];
+        $change = DB::table('items')
+            ->where('id', $id)
+            ->update($q);
+        return redirect('/Admin')->with('items',$items);
+    }
 
 
 
@@ -42,13 +63,6 @@ class AdminController extends Controller
     public function index()
     {
         //
-    }
-
-    public function adminEdit(Request $request)
-    {
-        $itemID = $request->productID;
-        $item = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->where('id','=',$itemID)->get();
-        return view('pages.adminEdit')->with('item',$item);
     }
 
     /**
@@ -89,21 +103,6 @@ class AdminController extends Controller
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request){
-        $pname = $request->pname;
-        $pcost = $request->pcost;
-        $pquantity =$request->pquantity;
-        $description = $request->pdescription;
-        $prate = $request->prate;
-        $id = $request->pid;
-        $affected = DB::table('items')
-                        ->where('id', $id)
-                        ->update(['productName' => $pname],['productCost' =>$pcost],['productQuantity'=>$pquantity],['productDescription'=> $description],['productRating'=>$prate]);
-        $items = DB::table('items')->select('id','productName','productCost','productQuantity','productDescription','productRating')->get();
-        $users = DB::table('Users')->select('name','email')->get();
-        $past = DB::table('past_orders')->select('user_id','item_id','orderQuantity')->get();
-        return view('pages.admin')->with('items',$items)->with('users',$users)->with('past',$past);
-    }
 
     /**
      * Update the specified resource in storage.
