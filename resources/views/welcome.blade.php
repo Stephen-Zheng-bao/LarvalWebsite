@@ -52,7 +52,7 @@
         <div class="col">
             <h2><u>Keyboards</u></h2>
           <br>
-          <img src="Images/Prod1.jpg" width="60%" height="40%">
+          <img src="" width="60%" height="40%">
           <br>
           <br>
           <p> Keyboard <br>
@@ -72,7 +72,7 @@
         <div class="col">
           <h2><u>Mouses</u></h2>
           <br>
-          <img src="Images/Prod2.jpg" width="60%" height="40%">
+          <img src="" width="60%" height="40%">
           <br>
           <br>
           <p> Keyboard <br>
@@ -92,7 +92,7 @@
         <div class="col">
             <h2><u>Headsets</u></h2>
             <br>
-          <img src="Images/Prod3.jpg" width="60%" height="40%">
+          <img src="" width="60%" height="40%">
           <br>
           <br>
           <p> Keyboard <br>
