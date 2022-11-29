@@ -28,7 +28,7 @@
                 <input type="email" name="email" id=""placeholder= "E-mail" required>
                 <input type="" placeholder="Subject"required>
                 <textarea name="" id="" cols="20" rows="15"placeholder="Message"required></textarea>
-                <input type="submit" name="" value="Submit" class="Sub-button">
+                 <x-primary-button>Submit</x-primary-button>
 
             </form>
         </div>
