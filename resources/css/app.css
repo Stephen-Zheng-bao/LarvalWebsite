@@ -15,59 +15,154 @@ html{
 
 
 /*This is the About Us CSS*/
-.ourPurpose{
-    width: 100%;
-    min-height: 220px;
+body{
+    /* do font here */
 
+    background-color: #f4f4f4;
+    align-content: center;
+    min-height: 100vh;
+    display: grid;
+   
+}
+section{
+    
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
 }
 
-.ourPurpose h1{
+.image{
+    
+    background: url("/img/YazTec2.png") center/cover no-repeat;
+    background-color: rgb(255, 255, 255);
+    background-size: 520px;
+}
+.content{
+
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    display: flex;
+    background: rgb(255, 255, 255);
+    
+   
+}
+
+.content h2{
+
+    letter-spacing: 8px;
+    opacity: 1;
+    text-transform: uppercase;
+    font-size: 40px;
+    
+}
+.content span{
+    
+    color: rgb(100, 100, 205);
+    width: 80px;
+    margin: 30px 0;
+}
+.content p{
+    
+    width: 65%;
+    line-height: 1.8;
     text-align: center;
-    font-size:40px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-weight: 300;
+    opacity: 0.8;
 }
-
-.ourPurpose p{
-    align-items: center;
+.links{
+    margin: 18px 0;
+}
+.links li{
+  
+    padding: 12px 16px;
+    width: 170px;
     text-align: center;
-    font-size: 19px;
-
+    border: 0.8px solid rgb(8, 8, 8);
+    list-style: none;
+    border-radius: 6px;
+}
+.links li a{
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.links li:hover{
+    border-color: rgb(100, 100, 205);
+}
+.links li:hover a{
+    color :rgb(100, 100, 205);
+}
+.vertical-line{
+  
+    background: rgb(0, 0, 0);
+    margin: 0 auto;
+    height: 35px;
+    width: 0.5px;
+}
+.icons{
+    display: flex;
+    padding: 5px 0;
+}
+.icons li{
+   
+    margin: 8px;
+    display: block;
+    padding: 10px;
+}
+.icons li i{
+    opacity: 0.6;
+    font-size: 28px;
+}
+.icons li i:hover{
+    color: rgb(100, 100, 205);
 }
 
-.ourVision{
-    width: 100%;
-    min-height: 210px;
+
+
+/*****************/
+
+@media(max-width: 992px){
+    section{
+        width: 100%;
+        grid-template-columns: 1fr;
+     
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 25px;
+        margin-top: 60px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
 }
 
-.ourVision h1{
-    align-items: center;
-    text-align: center;
-    font-size:40px;
-}
-
-.ourVision  p{
-    align-items: center;
-    text-align: center;
-    font-size: 19px;
-}
-
-.ourStatement{
-    width: 100%;
-    min-height: 210px;
-}
-
-.ourStatement h1{
-    align-items: center;
-    text-align: center;
-    font-size:40px;
-}
-
-.ourStatement p{
-    align-items: center;
-    text-align: center;
-    font-size: 19px;
-
-}
 
 
 
