@@ -5,8 +5,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="stylenew.css">
-
     <section class="contact-us">
         <div class="yaztec-contact-form">
             <h1>Contact<span>Us!</span></h1>

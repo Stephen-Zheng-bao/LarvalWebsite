@@ -145,7 +145,7 @@
                 popupContainer.style.display = 'flex';
 
 
-                popupImage.forEach(hide)
+                /*popupImage.forEach(hide)*/
 
                 let name = product.getAttribute('data-name');
                 popupBox.forEach(popup =>{
@@ -161,7 +161,7 @@
             close.querySelector('.fa-times').onclick = () =>{
                 close.classList.remove('active');
                 popupContainer.style.display = 'none';
-                popupImage.forEach(show)
+                /*popupImage.forEach(show)*/
             };
         });
     </script>

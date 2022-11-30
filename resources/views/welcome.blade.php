@@ -14,7 +14,9 @@
       <h4>Welcome to Our Website</h4>
       <h1>Yaz<span>Tec</span></h1>
       <h3> WE HAVE WHAT YOU NEED! </h3>
-      <button class="btn">Shop Here! &#8594; </button>
+        <form action="{{ route('dashboard')}}">
+                <button class="btn">Shop Here! &#8594; </button>
+        </form>
     </div>
   </div>
 
@@ -39,12 +41,12 @@
           <br>
           <p style="text-align: center;">
             <br>
-            <a class="button" href="#">Find out more</a>
+            <a class="button" href="{{ route('dashboard') }}">Find out more</a>
       </div>
       </div>
 
       <div class="YZproduct">
-        <img src="{{ URL::asset('image/2.jpg')}}">
+        <img src="{{ URL::asset('image/4.jpg')}}">
         <br>
         <h2>YazTec Mouse Pro</h2>
         <br>
@@ -60,12 +62,12 @@
           <br>
           <p style="text-align: center;">
             <br>
-            <a class="button" href="#">Find out more</a>
+            <a class="button" href="{{ route('dashboard') }}">Find out more</a>
       </div>
       </div>
 
      <div class="YZproduct">
-       <img src="{{ URL::asset('image/3.jpg')}}">
+       <img src="{{ URL::asset('image/5.jpg')}}">
        <br>
        <h2>YazTec Monitor Pro</h2>
        <br>
@@ -80,7 +82,7 @@
          <br>
         <p style="text-align: center;">
           <br>
-          <a class="button" href="#">Find out more</a>
+          <a class="button" href="{{ route('dashboard') }}">Find out more</a>
     </div>
     </div>
 
