@@ -24,7 +24,7 @@
                                 </td>
 
                                 <td class="hidden text-center md:table-cell">
-                                    <form action="{{ route('editAdmin') }}" method="POST">
+                                    <form  method="POST" action="{{ route('edit')}}">
                                         <input type="number" name="quantity" min=1 value="{{ $item->productQuantity }}"
                                                    class="text-center bg-gray-300" />
                                 </td>
@@ -41,7 +41,7 @@
 
                                 </td>
                             </tr>
-                            </form>
+                                    </form>
                         @endforeach
 
 

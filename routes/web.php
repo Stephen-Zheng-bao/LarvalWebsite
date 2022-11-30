@@ -68,7 +68,5 @@ Route::post('remove', [BasketController::class, 'removeBasket'])->name('basket.r
 Route::post('clear', [BasketController::class, 'clearAllBasket'])->name('basket.clear');
 Route::post('submit', [BasketController::class, 'submitBasket'])->name('basket.submit');
 
-Route::get('/editAdmin',[AdminController::class,'editAdmin'])->name('editAdmin');
-Route::post('editAdmin',[AdminController::class,'edit'])->name('edit');;
-
+Route::post('Admin',[AdminController::class,'edit'])->name('edit');
 require __DIR__.'/auth.php';
