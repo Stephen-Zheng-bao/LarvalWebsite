@@ -70,6 +70,12 @@
 
                         </tbody>
                     </table>
+                    <input type="hidden" value="{{$total=0}}">
+                    @foreach ($items as $item)
+                        <input type="hidden" value="{{$total+=$item->price*$item->orderQuantity}}">
+                    @endforeach
+                    <h3>Basket Total: £{{$total}}</h3>
+
 
                     <div>
 

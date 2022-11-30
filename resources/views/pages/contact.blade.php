@@ -7,9 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="stylenew.css">
 
-    </head>
-    <body>
-    <section class= "contact-us">
+    <section class="contact-us">
         <div class="yaztec-contact-form">
             <h1>Contact<span>Us!</span></h1>
             <div class="container">
@@ -38,6 +36,5 @@
         </div>
         </div>
     </section>
-    </body>
-    </head>
+
 </x-app-layout>

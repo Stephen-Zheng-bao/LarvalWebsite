@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 19.99,
             'productType' => 'Keyboard',
-            'productImage' => '',
+            'productImage' => '1.jpg',
             'productDescription' => 'Mechanical | USB Plug and Play',
             'productRating' => 5
 
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 14.99,
             'productType' => 'Keyboard',
-            'productImage' => '',
+            'productImage' => '2.jpg',
             'productDescription' => 'Backlit | Mechanical Keyboard',
             'productRating' => 4
 
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 39.99,
             'productType' => 'Mouse',
-            'productImage' => '',
+            'productImage' => '3.jpg',
             'productDescription' => 'Honeycomb Shell | Wired',
             'productRating' => 5
 
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 24.99,
             'productType' => 'Mouse',
-            'productImage' => '',
+            'productImage' => '4.jpg',
             'productDescription' => '8000 DPI | Programmable Buttons',
             'productRating' => 3
 
@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 99.99,
             'productType' => 'Monitor',
-            'productImage' => '',
+            'productImage' => '5.jpg',
             'productDescription' => '27” 5K display | Camera',
             'productRating' => 4
 
@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 69.99,
             'productType' => 'Controller',
-            'productImage' => '',
+            'productImage' => '6.jpg',
             'productDescription' => 'Wireless YBox controller | Adaptive Triggers',
             'productRating' => 5
 
@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 19.99,
             'productType' => 'Keyboard',
-            'productImage' => '',
+            'productImage' => '7.jpeg',
             'productDescription' => 'Ultra Slim Flat Wired Keyboard',
             'productRating' => 4
 
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 39.99,
             'productType' => 'Headset',
-            'productImage' => '',
+            'productImage' => '8.jpg',
             'productDescription' => 'Wired headset | Leatherette Ear Cups',
             'productRating' => 3
 
@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 34.99,
             'productType' => 'Headset',
-            'productImage' => '',
+            'productImage' => '9.jpg',
             'productDescription' => 'Noise cancelling | Bluetooth',
             'productRating' => 4
 
@@ -126,7 +126,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 90,
             'productType' => 'Monitor',
-            'productImage' => '',
+            'productImage' => '10.jpg',
             'productDescription' => '23” LED Monitor | Full HD',
             'productRating' => 5
 
@@ -136,7 +136,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 59.99,
             'productType' => 'Mouse',
-            'productImage' => '',
+            'productImage' => '11.jpg',
             'productDescription' => 'Logitik L3000 | Customisable Lighting',
             'productRating' => 4
 
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
             'productQuantity' => 50,
             'productCost' => 9.99,
             'productType' => 'Headset',
-            'productImage' => '',
+            'productImage' => '12.jpg',
             'productDescription' => 'Dual Ear Headset | Foam Pop Filter',
             'productRating' => 2
 

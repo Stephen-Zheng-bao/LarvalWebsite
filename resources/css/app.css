@@ -6,125 +6,97 @@
     margin: 0;
     padding: 0;
     font-family: 'kumbh Sans', sans-serif;}
-table, th, td {
+/*table, th, td {
     border: 1px solid black;
-}
-/*html{
-    font-size: 76%
 }*/
+html{
+    font-size: 76%
+}
 
 
 
 /*This is the About Us CSS*/
-body{
-    /* do font here */
-
-    background-color: #f4f4f4;
-    align-content: center;
-    min-height: 100vh;
-    display: grid;
-
+.about-us{
+    width: 100%;
+    height: 100%;
+    padding: 100px 0px;
+    background-color: #ffffff;
 }
-section{
-
-    width: 100vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+.about-us img{
+    height: auto;
+    width: 525px;
 }
-
-.image{
-
-    background: url("/img/YazTec2.png") center/cover no-repeat;
-    background-color: rgb(255, 255, 255);
-    background-size: 520px;
-}
-.content{
-
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    background: rgb(255, 255, 255);
-
+.about-text{
+    width: 600px;
 
 }
 
-.content h2{
+.about-text span{
 
-    letter-spacing: 8px;
-    opacity: 1;
-    text-transform: uppercase;
-    font-size: 40px;
 
-}
-.content span{
-
+    width: 85px;
+    margin: 35px 0;
     color: rgb(100, 100, 205);
-    width: 80px;
-    margin: 30px 0;
-}
-.content p{
 
-    width: 65%;
-    line-height: 1.8;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    font-weight: 300;
-    opacity: 0.8;
-}
-.links{
-    margin: 18px 0;
-}
-.links li{
 
-    padding: 12px 16px;
-    width: 170px;
-    text-align: center;
-    border: 0.8px solid rgb(8, 8, 8);
-    list-style: none;
-    border-radius: 6px;
 }
-.links li a{
+.main-text{
 
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(0, 0, 0);
-}
-.links li:hover{
-    border-color: rgb(100, 100, 205);
-}
-.links li:hover a{
-    color :rgb(100, 100, 205);
-}
-.vertical-line{
-
-    background: rgb(0, 0, 0);
-    margin: 0 auto;
-    height: 35px;
-    width: 0.5px;
-}
-.icons{
     display: flex;
-    padding: 5px 0;
+    align-items: center;
+    justify-content: space-around;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.about-text h2{
+
+    text-transform: capitalize;
+    margin-bottom: 6px;
+    color: rgb(0, 0, 0);
+    font-size: 85px;
+}
+.about-text h5{
+
+    margin-bottom: 6px;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    font-size: 24px;
+}
+.about-text p{
+
+
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.icons{
+
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
 }
 .icons li{
 
+
+    padding: 10px;
     margin: 8px;
     display: block;
-    padding: 10px;
+
 }
 .icons li i{
-    opacity: 0.6;
+
     font-size: 28px;
+    opacity: 0.6;
+
 }
 .icons li i:hover{
     color: rgb(100, 100, 205);
 }
-
-
 
 /*****************/
 
@@ -508,11 +480,11 @@ header .search {
     padding:0;
     box-sizing:border-box;
   }
- 
+
 .hero{
   height: 100vh;
   width: 100%;
-  background-image: url(images/Prod3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('/../public/image/Prod3.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -528,19 +500,19 @@ span{
   left:8%;
   transform: translateY(-50%);
 }
-   
 
-h1{
+
+.content h1{
   color: white;
   margin: 20px 0px 20px;
   font-size: 75px;
 }
-h3{
+.content h3{
   color: white;
   font-size: 25px;
   margin-bottom: 50px;
 }
-h4{
+.content h4{
   color: white;
   letter-spacing: 2px;
   font-size: 20px;
@@ -572,22 +544,23 @@ h4{
   right: 6px;
 }
 
- 
+
   .team-section-title {
- 
+
     margin:100px 0;
     text-align:center;
     text-transform:capitalize;
     color:rgb(100, 100, 205);
     position:relative;
+      font-size: 75px;
 
   }
- 
+
   .team-section-title::after {
-   
+
     height:6px;
     left:55%;
-    transform:translateX(-55%);  
+    transform:translateX(-55%);
     background-image:linear-gradient(to left, transparent 5%, #625261);
     bottom:-20px;
     position:absolute;
@@ -595,14 +568,14 @@ h4{
 
   }
   .team-row {
-   
+
     flex-wrap:wrap;
     padding:50px 0;
     display:flex;
     justify-content:center;
   }
   .YZproduct {
-   
+
     transition:all 0.6s;
     flex:1 1 250px;
     text-align:center;
@@ -610,10 +583,10 @@ h4{
     padding:30px 15px;
     cursor:pointer;
     max-width:250px;
-   
+
   }
   .YZproduct img {
-   
+
     width:165px;
     border-radius:50%;
     display:block;
@@ -621,30 +594,30 @@ h4{
     height:165px;
     object-fit:cover;
     border:2px solid #000000;
-   
+
   }
   .YZproduct:hover {
 
     transform:translateY(-30px);
     box-shadow:0 15px 25px rgba(0,0,0,0.2);
- 
+
   }
   .YZproduct h2 {
-   
+
     color:#625261;
     margin:15px 0;
     text-transform:uppercase;
     font-size:24px;
-   
+
   }
   .YZproduct p {
-   
+
     line-height:1.5;
     font-size:16px;
     color:#838383;
-   
+
   }
- 
+
   .info p{
     color: rgba(0, 0, 0, 0.8);
     font-size: 18px;
@@ -680,7 +653,7 @@ h4{
     padding: 10px 20px;
     border-radius: 32px;
     transition: .6s;
- 
+
 }
 .btn:hover{
     background-color: transparent;
@@ -695,7 +668,7 @@ h4{
 .social-links{
     left:50%;
     position:absolute
-    
+
 }
 .Trademark{
     position: relative;

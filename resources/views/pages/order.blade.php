@@ -11,11 +11,12 @@
 
                             <th >Name</th>
                             <th class="hidden md:table-cell"></th>
-                            <th class="pl-5 text-left lg:text-right lg:pl-0">
-                                <span class="lg:hidden" title="Quantity">Qtd</span>
-                                <span class="hidden lg:inline">Quantity</span>
+                            <th class="hidden text-center md:table-cell">
+                                Quantity
                             </th>
-                            <th class="hidden text-right md:table-cell"> Price</th>
+                            <th class="hidden text-center md:table-cell"> Price</th>
+
+                            <th class="hidden text-center md:table-cell"> <span class="text-sm font-medium lg:text-base">Total Price</span></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -32,18 +33,19 @@
                                 <td class="hidden text-right md:table-cell"></td>
 
 
-                                <td class="justify-center mt-9 md:justify-end md:flex">
-                                    <div class="h-10 w-30">
-                                        <div class="relative flex flex-row w-full h-8">
-                                            <p class="mb-2 md:ml-4 text-an">{{ $order->orderQuantity }}</p>
+                                <td class="hidden text-center md:table-cell">
+                                            {{ $order->orderQuantity }}
                                 </td>
 
-                                <td class="hidden text-right md:table-cell">
-                        <span class="text-sm font-medium lg:text-base">
-                            ${{ $order->price * $order->orderQuantity}}
-                        </span>
+                                <td class="hidden text-center md:table-cell">
+
+                                    ${{ $order->price}}
+
                                 </td>
-                                <td class="hidden text-right md:table-cell">
+                                <td class="hidden text-center md:table-cell">
+                                    <span class="text-sm font-medium lg:text-base">
+                                    ${{ $order->price * $order->orderQuantity}}
+                                    </span>
                                 </td>
                             </tr>
                         @endforeach
