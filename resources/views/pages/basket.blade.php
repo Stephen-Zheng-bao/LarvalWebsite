@@ -8,6 +8,17 @@
                     </div>
                 @endif
                 <h3 class="text-3xl text-bold">Basket List</h3>
+
+                    <input type="hidden" value="{{$size=0}}">
+                    @foreach ($items as $item)
+                        <input type="hidden" value="{{$size++}}">
+                    @endforeach
+                    <h3>Welcome
+                        @auth
+                            {{ Auth::user()->name }} :
+                            @endauth
+                            Basket Size is {{$size}}</h3>
+
                 <div class="flex-1">
                     <table class="w-full text-sm lg:text-base" cellspacing="0">
                         <thead>

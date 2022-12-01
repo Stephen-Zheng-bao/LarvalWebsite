@@ -1,18 +1,18 @@
 <x-app-layout>
 
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Welcome') }}
-            @auth
-                {{ Auth::user()->name }}
-            @endauth
-        </h2>
+
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <div class="container">
 
         <h3 class="title"> products </h3>
-
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Welcome') }}
+            @auth
+                {{ Auth::user()->name }}
+            @endauth
+        </h2>
         <div id="filterSection">
 
             <div class="filterInline">
